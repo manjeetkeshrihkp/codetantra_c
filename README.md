@@ -1,6 +1,3 @@
-Here is a **single copy-paste professional `README.md`**. Just copy everything below and paste it into your **README.md** file on GitHub.
-
-```markdown
 # 🚀 Codetantra C Programs
 
 ![Language](https://img.shields.io/badge/Language-C-blue)
