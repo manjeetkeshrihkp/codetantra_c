@@ -1,0 +1,66 @@
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+
+// 	//write your code here..
+	
+	#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int age;
+
+public:
+    void setData(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    void showData() {
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+    }
+};
+
+int main() {
+    string name;
+    int age;
+
+    // Input
+    getline(cin, name);
+    cin >> age;
+
+    // Create object
+    Student s;
+
+    // Create pointer to object
+    Student *ptr = &s;
+
+    // Use pointer to call member functions
+    ptr->setData(name, age);
+    ptr->showData();
+
+    return 0;
+}
+
+
+// };
+
+// int main() {
+//     Student s;
+//     string name;
+//     int age;
+
+//     getline(cin, name);
+//     cin >> age;
+
+//     s.setData(name, age);
+//     s.showData();
+
+//     return 0;
+// }
+
