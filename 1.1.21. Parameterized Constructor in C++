@@ -1,0 +1,76 @@
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Person {
+// public:
+//     string name;
+//     int age;
+
+//     // Parameterized constructor
+//     Person(string n, int a) {
+//         // write your code here
+        
+//     }
+
+//     // Destructor
+//     ~Person() {
+//         // write your code here
+        
+//     }
+// };
+
+// int main() {
+//     string name;
+//     int age;
+
+//     cin >> ws;
+//     getline(cin, name);
+//     cin >> age;
+
+//     Person p(name, age);
+
+//     // write your code here to display output
+
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person {
+public:
+    string name;
+    int age;
+
+    // Parameterized constructor
+    Person(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Destructor
+    ~Person() {
+        cout << name << " has been deleted" << endl;
+    }
+};
+
+int main() {
+    string name;
+    int age;
+
+    // Input
+    getline(cin, name);
+    cin >> age;
+
+    // Create object using parameterized constructor
+    Person p(name, age);
+
+    // Output
+    cout << p.name << " is " << p.age << " years old" << endl;
+
+    // Destructor will be called automatically when 'p' goes out of scope
+    return 0;
+}
