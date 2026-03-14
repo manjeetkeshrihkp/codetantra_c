@@ -1,0 +1,42 @@
+// #include <iostream>
+    void setmarks(int mark1, int mark2, int mark3) {
+        m1 = mark1;
+        m2 = mark2;
+        m3 = mark3;
+        total = m1 + m2 + m3;
+        avg = total / 3.0;
+    }
+
+    void show() {
+        cout << rollno << endl;
+        cout << sname << endl;
+        cout << m1 << endl;
+        cout << m2 << endl;
+        cout << m3 << endl;
+        cout << total << endl;
+        cout << fixed << setprecision(4) << avg << endl;
+    }
+};
+
+int main() {
+    int roll;
+    string name;
+    int mark1, mark2, mark3;
+
+    // Input
+    cin >> roll;
+    cin.ignore(); // To handle newline after roll number
+    getline(cin, name);
+    cin >> mark1 >> mark2 >> mark3;
+
+    // Create object
+    Marks m;
+    m.setdata(roll, name);
+    m.setmarks(mark1, mark2, mark3);
+
+    // Output
+    m.show();
+
+    return 0;
+}
+
