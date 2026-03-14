@@ -1,0 +1,91 @@
+// #include <iostream>
+// using namespace std;
+
+// class Employee {
+
+// 	//write your code here..
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Base class
+class Employee {
+protected:
+    string empName;
+    int empID;
+public:
+    void setEmployee(string name, int id) {
+        empName = name;
+        empID = id;
+    }
+    void displayEmployee() {
+        cout << "Name: " << empName << endl;
+        cout << "ID: " << empID << endl;
+    }
+};
+
+// Derived class
+class Manager : public Employee {
+private:
+    string department;
+public:
+    void setManager(string name, int id, string dept) {
+        setEmployee(name, id);   // call base class method
+        department = dept;
+    }
+    void displayManager() {
+        displayEmployee();       // call base class method
+        cout << "Department: " << department << endl;
+    }
+};
+
+int main() {
+    string name, dept;
+    int id;
+
+    // Input
+    getline(cin, name);
+    cin >> id;
+    cin.ignore(); // clear newline
+    getline(cin, dept);
+
+    // Create Manager object
+    Manager m;
+
+    // Pointer to derived class
+    Manager *ptr = &m;
+
+    // Use pointer to call functions
+    ptr->setManager(name, id, dept);
+    ptr->displayManager();
+
+    return 0;
+}
+
+
+	
+// };
+
+// class Manager : public Employee {
+
+// 	//write your code here..
+	
+// };
+
+// int main() {
+//     string name, dept;
+//     int id;
+
+//     getline(cin, name);
+//     cin >> id;
+//     cin.ignore();
+//     getline(cin, dept);
+
+//     Manager m;
+//     Manager* ptr = &m;
+
+//     ptr->setManager(name, id, dept);
+//     ptr->displayManager();
+
+//     return 0;
+// }
