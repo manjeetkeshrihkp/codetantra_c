@@ -1,0 +1,37 @@
+#include <iostream>
+#include <iomanip>
+#define PI 3.14159
+
+using namespace std;
+
+// Rectangle area
+double calculateArea(int length, int breadth) {
+    return length * breadth;
+}
+
+// Circle area
+double calculateArea(int radius) {
+	return PI * radius *radius;
+}
+
+// Triangle area
+double calculateArea(int base, int height, bool isTriangle) {
+    return 0.5 * base * height;
+}
+
+int main() {
+    int length, breadth, radius, base, height;
+    
+    // Input for rectangle
+    cin >> length >> breadth;
+    
+    // Input for circle
+    cin >> radius;
+    
+    // Input for triangle
+    cin >> base >> height;
+    
+    cout << fixed << setprecision(2);
+    
+    cout << calculateArea(length, breadth) << endl;
+}
