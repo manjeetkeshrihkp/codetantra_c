@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+// Forward declaration
+class Rectangle;
+
+class Square {
+private:
+		int side;
+public:
+	Square(int s){
+		side = s;
+	}
+friend int calculateSquareArea(Square s);
+friend class Rectangle;
+};
+// Friend function definition
+int calculateSquareArea(Square s) {
+    return s.side * s.side;
+	
+}
+class Rectangle {
+    // write your code here
+    // - access private data of Square
+    // - calculate rectangle area
+
+	private:
+Square sq;
+public:
+Rectangle(Square s) : sq(s){}
+int calculateRectangleArea(){
+	return sq.side * sq.side;
+}
+};
+int main() {
+    int side;
+}
