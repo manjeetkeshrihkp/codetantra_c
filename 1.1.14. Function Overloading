@@ -34,4 +34,8 @@ int main() {
     cout << fixed << setprecision(2);
     
     cout << calculateArea(length, breadth) << endl;
+    cout << calculateArea(radius) << endl;
+    cout << calculateArea(base, height, true) << endl;
+    
+    return 0;
 }
